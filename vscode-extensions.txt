@@ -1,0 +1,8 @@
+dbaeumer.vscode-eslint-1.2.2
+eg2.tslint-0.8.1
+gerane.Theme-Dark-Dracula-0.0.2
+ms-vscode.js-atom-grammar-0.1.10
+ms-vscode.typescript-javascript-grammar-0.0.17
+nwolverson.ide-purescript-0.6.3
+nwolverson.language-purescript-0.1.1
+robertohuertasm.vscode-icons-7.1.2
