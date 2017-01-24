@@ -1,0 +1,25 @@
+// Place your settings in this file to overwrite the default settings
+{
+    "editor.fontFamily": "Source Code Pro for Powerline Light",
+    "editor.fontSize": 14,
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+		"files.trimTrailingWhitespace": true,
+		"git.enabled": false,
+		"editor.acceptSuggestionOnEnter": false,
+		"search.exclude": {
+			"**/node_modules": true,
+			"**/bower_components": true,
+			"**/logs": true,
+			"**/.vscode": true,
+			"**/.tmp": true,
+			"**/dist": true,
+			"**/libs": true
+		},
+		"emmet.triggerExpansionOnTab": false,
+		"window.zoomLevel": 0,
+		"vsicons.dontShowNewVersionMessage": true,
+		"window.showFullPath": true,
+		"editor.renderLineHighlight": "all",
+		"window.fullScreenZenMode": false
+}
