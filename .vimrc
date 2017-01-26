@@ -17,6 +17,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'raichoo/purescript-vim'
 Plugin 'FrigoEU/psc-ide-vim'
 Plugin 'vim-syntastic/syntastic'
+Plugin 'vim-scripts/npm'
 
 call vundle#end()
 syntax on
@@ -33,6 +34,10 @@ set relativenumber
 set number
 set tabstop=2
 set expandtab
+set shiftwidth=2
+
+" General Mapping
+inoremap jj <Esc>
 
 " Airline
 let g:airline#extensions#tabline#enabled = 1
@@ -42,8 +47,10 @@ let g:airline_theme = 'kalisi'
 
 " CtrlP
 let g:ctrlp_working_path_mode = 0
+let g:ctrlp_custom_ignore = 'node_modules\|bower_components'
 
 " Buffer
+set hidden
 nmap <leader>N :enew<cr>
 nmap <leader>C :bd<cr>
 nmap <leader>w :w<cr>
@@ -57,6 +64,7 @@ nmap <leader>l :BuffergatorMruCycleNext<cr>
 " NERDTree
 let NERDTreeAutoCenter = 1
 nmap <leader>n :NERDTreeToggle<cr>
+au FileType nerdtree nnoremap <localleader>b :Bookmark<cr>
 
 " Themes and Colors
 colorscheme kalisi
@@ -67,6 +75,8 @@ set columns=145
 
 " PureScript
 let g:purescript_indent_if = 2
+let g:purescript_indent_do = 2
+let g:purescript_indent_where = 2
 
 " PSC IDE
 let g:psc_ide_syntastic_mode = 1
