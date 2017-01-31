@@ -35,6 +35,7 @@ set number
 set tabstop=2
 set expandtab
 set shiftwidth=2
+set backspace=start,indent,eol
 
 " General Mapping
 inoremap jj <Esc>
@@ -70,8 +71,9 @@ au FileType nerdtree nnoremap <localleader>b :Bookmark<cr>
 colorscheme kalisi
 set background=dark
 set guifont=Source_Code_Pro_Light:h12
-set lines=38
-set columns=145
+au GUIEnter * simalt ~x
+"set lines=38
+"set columns=145
 
 " PureScript
 let g:purescript_indent_if = 2
