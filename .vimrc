@@ -64,6 +64,7 @@ nmap <leader>l :BuffergatorMruCycleNext<cr>
 
 " NERDTree
 let NERDTreeAutoCenter = 1
+let NERDTreeQuitOnOpen = 1
 nmap <leader>n :NERDTreeToggle<cr>
 au FileType nerdtree nnoremap <localleader>b :Bookmark<cr>
 
