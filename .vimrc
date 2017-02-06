@@ -1,8 +1,10 @@
+cd ~
+
 " Vundle
 set nocompatible
 filetype off
 
-set rtp+=$HOME/vimfiles/bundle/Vundle.vim/
+set rtp+=$USERPROFILE/vimfiles/bundle/Vundle.vim/
 call vundle#begin('$USERPROFILE/vimfiles/bundle/')
 
 Plugin 'VundleVim/Vundle.vim'
