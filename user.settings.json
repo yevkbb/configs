@@ -1,7 +1,7 @@
-// Place your settings in this file to overwrite the default settings
 {
-    "editor.fontFamily": "Source Code Pro for Powerline Light",
-    "editor.fontSize": 14,
+		"editor.fontFamily": "Fira Code Light",
+		"editor.fontLigatures": true,
+		"editor.fontSize": 15,
     "editor.tabSize": 2,
     "editor.insertSpaces": true,
 		"files.trimTrailingWhitespace": true,
@@ -19,7 +19,11 @@
 		"emmet.triggerExpansionOnTab": false,
 		"window.zoomLevel": 0,
 		"vsicons.dontShowNewVersionMessage": true,
-		"window.showFullPath": true,
 		"editor.renderLineHighlight": "all",
-		"window.fullScreenZenMode": false
-}
+		"vsicons.projectDetection.disableDetect": true,
+		"zenMode.fullScreen": false,
+		"editor.renderIndentGuides": true,
+		"workbench.colorTheme": "Atom One Dark",
+		"workbench.iconTheme": "vscode-icons",
+		"window.title": "${activeEditorMedium}${separator}${rootName}${separator}${dirty}${dirty}${dirty}"
+	}
