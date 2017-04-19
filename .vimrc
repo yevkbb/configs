@@ -20,6 +20,7 @@ Plugin 'raichoo/purescript-vim'
 Plugin 'FrigoEU/psc-ide-vim'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'vim-scripts/npm'
+Plugin 'easymotion/vim-easymotion'
 
 call vundle#end()
 syntax on
@@ -30,6 +31,9 @@ let mapleader = ","
 let maplocalleader = "\\"
 
 " General Editor Settings
+set wrap
+set nolist
+set linebreak
 set laststatus=2
 set encoding=utf-8
 set relativenumber
@@ -50,7 +54,7 @@ let g:airline_theme = 'kalisi'
 
 " CtrlP
 let g:ctrlp_working_path_mode = 0
-let g:ctrlp_custom_ignore = 'node_modules\|bower_components'
+let g:ctrlp_custom_ignore = 'node_modules\|bower_components\|output\|dist'
 
 " Buffer
 set hidden
@@ -88,3 +92,8 @@ let g:psc_ide_syntastic_mode = 1
 au FileType purescript nnoremap <localleader>t :PSCIDEtype<cr>
 au FileType purescript nnoremap <localleader>i :PSCIDEimportIdentifier<cr>
 au FileType purescript nnoremap <localleader>a :PSCIDEapplySuggestion<cr>
+
+" Task Files
+let @d='xiOKjj' " Macro to mark an item as done
+imap <C-b> <C-k>PR<Tab>
+nmap <C-d> @d
