@@ -1,0 +1,21 @@
+OS Install:
+
+stack
+vundle
+vimproc
+
+Global Stack Install:
+
+ghc-mod
+hdevtools
+hlint
+hoogle
+pointfree
+
+Add to .bashrc:
+
+PATH=$PATH:~/.local/bin:`stack path --compiler-bin`
+
+Online Resource:
+
+www.stephendiehl.com/posts/vim_haskell.html
