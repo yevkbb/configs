@@ -22,12 +22,12 @@ Plugin 'vim-syntastic/syntastic'
 Plugin 'vim-scripts/npm'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'tpope/vim-unimpaired'
-
 Plugin 'eagletmt/ghcmod-vim'
 Plugin 'eagletmt/neco-ghc'
 Plugin 'ervandew/supertab'
 Plugin 'Shougo/neocomplete.vim'
 Plugin 'godlygeek/tabular'
+Plugin 'bitc/vim-hdevtools'
 
 call vundle#end()
 syntax on
@@ -106,6 +106,7 @@ imap <C-b> <C-k>PR<Tab>
 nmap <C-d> @d
 
 " Haskell
+map <silent> <Leader>e :Errors<CR>
 map <Leader>s :SyntasticToggleMode<CR>
 
 set statusline+=%#warningmsg#
@@ -119,8 +120,11 @@ let g:syntastic_check_on_wq = 0
 
 map <silent> tw :GhcModTypeInsert<CR>
 map <silent> ts :GhcModSplitFunCase<CR>
-map <silent> tq :GhcModType<CR>
-map <silent> te :GhcModTypeClear<CR>
+" map <silent> tq :GhcModType<CR>
+" map <silent> te :GhcModTypeClear<CR>
+
+au FileType haskell nnoremap <buffer> tq :HdevtoolsType<CR>
+au FileType haskell nnoremap <buffer> <silent> te :HdevtoolsClear<CR>
 
 let g:SuperTabDefaultCompletionType = '<c-x><c-o>'
 
