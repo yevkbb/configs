@@ -49,6 +49,7 @@ set tabstop=2
 set expandtab
 set shiftwidth=2
 set backspace=start,indent,eol
+set autoindent
 
 " General Mapping
 inoremap jj <Esc>
