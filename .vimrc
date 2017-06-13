@@ -4,8 +4,8 @@ cd ~
 set nocompatible
 filetype off
 
-set rtp+=$USERPROFILE/vimfiles/bundle/Vundle.vim/
-call vundle#begin('$USERPROFILE/vimfiles/bundle/')
+set rtp+=~/.vim/bundle/Vundle.vim/
+call vundle#begin('~/.vim/bundle/')
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-airline/vim-airline'
@@ -21,6 +21,13 @@ Plugin 'FrigoEU/psc-ide-vim'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'vim-scripts/npm'
 Plugin 'easymotion/vim-easymotion'
+Plugin 'tpope/vim-unimpaired'
+
+Plugin 'eagletmt/ghcmod-vim'
+Plugin 'eagletmt/neco-ghc'
+Plugin 'ervandew/supertab'
+Plugin 'Shougo/neocomplete.vim'
+Plugin 'godlygeek/tabular'
 
 call vundle#end()
 syntax on
@@ -97,3 +104,39 @@ au FileType purescript nnoremap <localleader>a :PSCIDEapplySuggestion<cr>
 let @d='xiOKjj' " Macro to mark an item as done
 imap <C-b> <C-k>PR<Tab>
 nmap <C-d> @d
+
+" Haskell
+map <Leader>s :SyntasticToggleMode<CR>
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
+
+map <silent> tw :GhcModTypeInsert<CR>
+map <silent> ts :GhcModSplitFunCase<CR>
+map <silent> tq :GhcModType<CR>
+map <silent> te :GhcModTypeClear<CR>
+
+let g:SuperTabDefaultCompletionType = '<c-x><c-o>'
+
+if has("gui_running")
+    imap <c-space> <c-r>=SuperTabAlternateCompletion("\<lt>c-x>\<lt>c-o>")<cr>
+  else " no gui
+      if has("unix")
+            inoremap <Nul> <c-r>=SuperTabAlternateCompletion("\<lt>c-x>\<lt>c-o>")<cr>
+              endif
+            endif
+
+let g:haskellmode_completion_ghc = 1
+autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
+
+let g:haskell_tabular = 1
+
+vmap a= :Tabularize /=<CR>
+vmap a; :Tabularize /::<CR>
+vmap a- :Tabularize /-><CR>
