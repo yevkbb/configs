@@ -55,7 +55,7 @@ set guioptions-=L
 " General Mapping
 inoremap jj <Esc>
 "" Remap ZZ from Save and Exit to center
-inoremap <S-z><S-z> <Esc>zz
+inoremap <S-z><S-z> <Esc>zza
 nnoremap <S-z><S-z> <Esc>zz
 
 " Airline
