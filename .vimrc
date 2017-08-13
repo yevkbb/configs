@@ -50,6 +50,7 @@ set expandtab
 set shiftwidth=2
 set backspace=start,indent,eol
 set autoindent
+set renderoptions=type:directx
 set guioptions-=L
 
 " Spelling
