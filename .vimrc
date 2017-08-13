@@ -16,7 +16,7 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'pangloss/vim-javascript'
 Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'scrooloose/nerdtree'
-Plugin 'raichoo/purescript-vim'
+Plugin 'purescript-contrib/purescript-vim'
 Plugin 'FrigoEU/psc-ide-vim'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'vim-scripts/npm'
@@ -52,11 +52,16 @@ set backspace=start,indent,eol
 set autoindent
 set guioptions-=L
 
+" Spelling
+au FileType text setlocal spell spelllang=en_us 
+
 " General Mapping
 inoremap jj <Esc>
 "" Remap ZZ from Save and Exit to center
 inoremap <S-z><S-z> <Esc>zza
 nnoremap <S-z><S-z> <Esc>zz
+inoremap II <Esc>I
+inoremap AA <Esc>A
 
 " Airline
 let g:airline#extensions#tabline#enabled = 1
