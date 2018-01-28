@@ -1,0 +1,9 @@
+[alias]
+  st = status -sbuall
+  lg = log --oneline --graph
+  unstage = reset HEAD --
+  last = log --name-status -1 HEAD
+  br = branch -avv
+  ct = commit
+  ctm = commit -m
+  diffs = diff --staged
